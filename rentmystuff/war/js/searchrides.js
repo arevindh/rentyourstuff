@@ -7,16 +7,17 @@ function initialize() {
 	var input_to = document.getElementById('toSearch');
 	var autocomplete_from = new google.maps.places.Autocomplete(input_from);
 	var autocomplete_to = new google.maps.places.Autocomplete(input_to);
-
-	google.maps.event.addListener(autocomplete, 'place_changed', function() {
+	google.maps.event.addListener(autocomplete_from, 'place_changed', function() {
 		var place_from = autocomplete_from.getPlace();
+	});
+	google.maps.event.addListener(autocomplete_to, 'place_changed', function() {
 		var place_to = autocomplete_to.getPlace();
 	});
 }
 //google.maps.event.addDomListener(window, 'load', initialize);
 
 //TEST!!
-
+/*
 function showRequest(formData, jqForm, options) { 
     // formData is an array; here we use $.param to convert it to a string to display it 
     // but the form plugin does this for you automatically when it submits the data 
@@ -32,3 +33,4 @@ function showRequest(formData, jqForm, options) {
     // returning anything other than false will allow the form submit to continue 
     return true; 
 } 
+*/
