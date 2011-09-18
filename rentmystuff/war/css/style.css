@@ -139,16 +139,16 @@ dl.contact dt, dl.contact dd {margin-bottom:5px}
 #myform textarea {height:262px;overflow:auto;float:left;width:526px;font-size:13px;line-height:1.23em;color:#0f0f0f;padding:4px 10px;margin:0;font-family:Arial, Helvetica, sans-serif;border:1px solid #ebebeb;background:none}
 .text-form {float:left;display:block;font-size:14px;width:73px;line-height:1.78em;color:#0f0f0f}
 /*CUSTOM CSS*/
-.contactForm input, .contactForm textarea { -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:7px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
-.contactForm textarea{ width:630px; height: 100px}
-.contactForm p{ margin-bottom:0px;}
-.contactForm input, .contactForm textarea, .contactForm select{ margin-bottom:10px;}
-.contactForm input:focus, .contactForm textarea:focus, .contactForm input:hover, .contactForm textarea:hover{background:#1f1f1f;}
-.contactForm .submit{cursor:pointer; -webkit-box-shadow: 0px 1px 2px 0px #000000;
+.customForm input, .contactForm textarea { -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:7px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.customForm textarea{ width:630px; height: 100px}
+.customForm p{ margin-bottom:0px;}
+.customForm input, .contactForm textarea, .contactForm select{ margin-bottom:10px;}
+.customForm input:focus, .contactForm textarea:focus, .contactForm input:hover, .contactForm textarea:hover{background:#1f1f1f;}
+.customForm .submit{cursor:pointer; -webkit-box-shadow: 0px 1px 2px 0px #000000;
 -moz-box-shadow: 0px 1px 2px 0px #000000; o-box-shadow: 0px 1px 2px 0px #000000; box-shadow: 0px 1px 2px 0px #000000; width:120px; }
-.contactForm input{ width:300px;}
-.contactForm .submit:hover, .contactForm .submit:focus{ background:#1f1f1f;}
-.contactForm select {-webkit-appearance-menulist-text; -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:4px 0px 4px 0px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px; width: 315px; height: 30px}
+.customForm input{ width:300px;}
+.customForm .submit:hover, .contactForm .submit:focus{ background:#1f1f1f;}
+.customForm select {-webkit-appearance-menulist-text; -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:4px 0px 4px 0px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px; width: 315px; height: 30px}
 
 .buttons {padding-top:16px;text-align:right}
 .buttons a {margin-left:6px;padding:9px 25px 11px}

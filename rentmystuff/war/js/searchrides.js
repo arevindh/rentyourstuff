@@ -3,7 +3,6 @@
  */
 
 function initialize() {
-	alert("inside initialize ");
 	var input_from = document.getElementById('fromSearch');
 	var input_to = document.getElementById('toSearch');
 	var autocomplete_from = new google.maps.places.Autocomplete(input_from);
