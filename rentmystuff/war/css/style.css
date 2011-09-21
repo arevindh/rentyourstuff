@@ -149,7 +149,9 @@ dl.contact dt, dl.contact dd {margin-bottom:5px}
 .customForm input{ width:300px;}
 .customForm .submit:hover, .contactForm .submit:focus{ background:#1f1f1f;}
 .customForm select {-webkit-appearance-menulist-text; -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:4px 0px 4px 0px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px; width: 315px; height: 30px}
+.customForm .submit{margin-left:30%; margin-top: 7%}
 
+#FBlogin {margin-left: 67%}
 .buttons {padding-top:16px;text-align:right}
 .buttons a {margin-left:6px;padding:9px 25px 11px}
 /* footer */
