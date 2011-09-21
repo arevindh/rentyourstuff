@@ -43,7 +43,7 @@
 <!-- ALL ON LOAD CALLS HERE -->
 <script>
   $(document).ready(function() {
-  $("#datetimepicker").timepicker();
+  $(".datetimepicker").timepicker();
   initialize("fromAdd", "toAdd");
   
   //FORM SUBMIT THROUGH AJAX
@@ -62,7 +62,7 @@
         // $.ajax options can be used here too, for example: 
         //timeout:   3000 
     };
-    $('#addRideForm').submit(function() { 
+    $('#addBookForm').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
         // wrap it in a jQuery object and then invoke ajaxSubmit 
         $(this).ajaxSubmit(options); 
@@ -101,7 +101,7 @@
       <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
   <![endif]-->
 </head>
-<body id="page-rides">
+<body id="page-books">
 	<!-- header -->
 	<div class="bg">
 		<div class="main">
@@ -118,9 +118,9 @@
 						<ul class="menu">
 							<li><a href="../index.html">Home Page</a>
 							</li>
-							<li><a class="active" href="rides.html">Rides</a>
+							<li><a href="rides.html">Rides</a>
 							</li>
-							<li><a href="books.html">Books</a>
+							<li><a class="active" href="books.html">Books</a>
 							</li>
 							<li><a href="electronics.html">Electronics</a>
 							</li>
@@ -132,45 +132,35 @@
 			</header>
 			<!-- content -->
 
-			<section id="content" id="rides">
+			<section id="content" id="books">
 				<div class="padding">
 					<div class="wrapper p4">
-						<div class="col-3" id="addRideContent">
-							<form id="addRideForm" action="submit.php">
+						<div class="col-3" id="addBookContent">
+							<form id="addBookForm" action="submit.php">
 								<div class="col-1">
 									<div class="customForm">
 
-										<h2>Add a Ride</h2>
+										<h2>Add a Book</h2>
 
 										<p>
-											<input type="text" name="from" id="fromAdd"
-												value="From where"
-												onblur="if (this.value == ''){this.value = 'From where'; }"
-												onfocus="if (this.value == 'From where') {this.value = '';}">
-											<br> <input type="text" name="to" id="toAdd"
-												value="To where"
-												onblur="if (this.value == ''){this.value = 'To where'; }"
-												onfocus="if (this.value == 'To where') {this.value = '';}">
-
-											<input type="text" name="date" id="datetimepicker"
-												value="Select Date & Time"
-												onblur="if (this.value == ''){this.value = 'Select Date & Time'; }"
-												onfocus="if (this.value == 'Select Date & Time') {this.value = '';}">
-											<br> <select name="seats"
-												style="clear: left; padding-top: 2px">
-												<option value="" selected>Select Number of Seats</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-											</select>
-
+											<input type="text" name="title" id="bookTitle"
+												value="Book Title"
+												onblur="if (this.value == ''){this.value = 'Book Title'; }"
+												onfocus="if (this.value == 'Book Title') {this.value = '';}">
+											<br> 
+											<input type="text" name="fromDate" class="datetimepicker"
+												value="From When"
+												onblur="if (this.value == ''){this.value = 'From When'; }"
+												onfocus="if (this.value == 'From When') {this.value = '';}">
+											<br> 
+											<input type="text" name="toDate" class="datetimepicker"
+												value="To When"
+												onblur="if (this.value == ''){this.value = 'To When'; }"
+												onfocus="if (this.value == 'To When') {this.value = '';}">
 										</p>
 										<p>
-											<input type="submit" name="addThisRide" class="submit"
-												value="Add This Ride">
+											<input type="submit" name="addThisBook" class="submit"
+												value="Add This Book">
 										</p>
 
 									</div>
@@ -186,10 +176,10 @@
 												value="Add a description"
 												onblur="if (this.value == ''){this.value = 'Add a description'; }"
 												onfocus="if (this.value == 'Add a description') {this.value = '';}">
-											<br> <input type="text" name="ride-cost" id="ride-cost"
-												value="Ride Cost (no. of credits)"
-												onblur="if (this.value == ''){this.value = 'Ride Cost (no. of credits)'; }"
-												onfocus="if (this.value == 'Ride Cost (no. of credits)') {this.value = '';}">
+											<br> <input type="text" name="book-cost" id="book-cost"
+												value="Book Rent Cost (no. of credits)"
+												onblur="if (this.value == ''){this.value = 'Book Rent Cost (no. of credits)'; }"
+												onfocus="if (this.value == 'Book Rent Cost (no. of credits)') {this.value = '';}">
 										</div>
 									</div>
 								</div>
@@ -199,15 +189,14 @@
 						<div class="col-4">
 							<div style="margin-top: 10%">
 								<div>
-									<img src="../images/buttons/add_ride.png"></img>
+									<img src="../images/buttons/add_book.png"></img>
 									<div style="float: right;">
 										<a href="#"
-											onclick="$('#addRideContent').load('rides.html #addRideContent', function(){
-											$('#datetimepicker').timepicker();
-											initialize('fromAdd', 'toAdd');});return false;"><h3
-												style="float: left; padding-top: 10%;">
-												Add Rides
-												</h2>
+											onclick="$('#addBookContent').load('books.html #addBookContent', 
+											function(){
+											$('.datetimepicker').timepicker();
+											});
+											return false;"><h3 style="float: left; padding-top: 10%;">Add Books	</h2>
 										</a>
 									</div>
 								</div>
@@ -215,19 +204,17 @@
 							</div>
 							<div>
 								<div>
-									<img src="../images/buttons/search_ride.png"></img>
+									<img src="../images/buttons/search_book.png"></img>
 									<div style="float: right">
 										<a href="#"
-											onclick="$('#addRideContent').load('content/rides_search.html', function() {
-											$('#datetimepicker').timepicker();
-											initialize('fromSearch', 'toSearch');});  return false;"><h3
-												style="float: left; padding-top: 10%;">Find Rides</h3> </a>
-
+											onclick="$('#addBookContent').load('content/books_search.html', function() {
+											$('.datetimepicker').timepicker();
+											});  
+											return false;"><h3 style="float: left; padding-top: 10%;">Find Books</h3> 
+										</a>
 									</div>
 								</div>
-								<!--  <a href="#" onclick='$("addRideContent").load("../test.html");'><h2>aa</h2></a>-->
 							</div>
-
 						</div>
 					</div>
 				</div>
