@@ -154,6 +154,16 @@ dl.contact dt, dl.contact dd {margin-bottom:5px}
 #FBlogin {margin-left: 67%}
 .buttons {padding-top:16px;text-align:right}
 .buttons a {margin-left:6px;padding:9px 25px 11px}
+
+/*LISTING RESULTS*/
+.display-wrapper {padding-left: 15px; padding-bottom: 10px}
+.display-box {padding-left: 15px}
+.display-box .prod-box {height: 250px; width: 90%; padding: 10px 0px 0 10px}
+.display-box .item {width: 100%}
+.item .img-wrapper {position: relative; padding-right: 5px; padding-top: 5px}
+.item .item-desc {width:75%; float: right; position: relative; overflow: auto; padding-top: 0px}
+.item-desc h2{font-size: 20px; font-weight: bold;}
+
 /* footer */
 footer {width:100%;}
 .row-top {width:100%;padding:33px 0 42px;background:#000}
