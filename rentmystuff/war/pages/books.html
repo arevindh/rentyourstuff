@@ -112,18 +112,21 @@
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
 					<div id="FBlogin" style="margin-left: 67%">
-						<a href=""><img src="../images/buttons/fb.png">
-						</a>
+						<a href=""><img src="../images/buttons/fb.png"> </a>
 					</div>
 
 				</div>
 				<div class="row-2">
 					<nav>
 						<ul class="menu">
-							<li><a href="../index.html">Home Page</a></li>
-							<li><a href="rides.html">Rides</a></li>
-							<li><a class="active" href="books.html">Books</a></li>
-							<li><a href="electronics.html">Electronics</a></li>
+							<li><a href="../index.html">Home Page</a>
+							</li>
+							<li><a href="rides.html">Rides</a>
+							</li>
+							<li><a class="active" href="books.html">Books</a>
+							</li>
+							<li><a href="electronics.html">Electronics</a>
+							</li>
 							<li class="last-item"><a href="misc.html">Miscellaneous</a>
 							</li>
 						</ul>
@@ -132,93 +135,78 @@
 			</header>
 			<!-- content -->
 
-			<section id="content" id="books">
+			<section id="content">
 				<div class="padding">
 					<div class="wrapper p4">
-						<div class="col-3" id="addBookContent">
-							<form id="addBookForm" action="submit.php">
+						<div class="col-3">
+							<div id="bookContent">
 								<div class="col-1">
-									<div class="customForm">
-
-										<h2>Add a Book</h2>
-
-										<p>
-											<input type="text" name="title" id="bookTitle"
-												value="Book Title"
-												onblur="if (this.value == ''){this.value = 'Book Title'; }"
-												onfocus="if (this.value == 'Book Title') {this.value = '';}">
-											<br> <input type="text" name="fromDate"
-												class="datetimepicker" value="From When"
-												onblur="if (this.value == ''){this.value = 'From When'; }"
-												onfocus="if (this.value == 'From When') {this.value = '';}">
-											<br> <input type="text" name="title" id="numberOfDays"
-												value="Rent Duration (in days)"
-												onblur="if (this.value == ''){this.value = 'Rent Duration (in days)'; }"
-												onfocus="if (this.value == 'Rent Duration (in days)') {this.value = '';}">
-										</p>
-										<p>
-											<input type="submit" name="addThisBook" class="submit"
-												value="Add This Book">
-										</p>
-
-									</div>
+									<h3>Listed Books For You</h3>
+									<table id="featuredBooks">
+										<tr>
+											<td class="bookcover"><img name="itempic"
+												src="../images/page1-img1.png" alt="" "/></td>
+											<td class="title"><a href="#">Venetian Betrayal</a></td>
+											<td class="author">by Author</td>
+											<td class="rent">RENT COST</td>
+											<td class="fromdate">FROM DATE</td>
+											<td class="fordays">FOR DAYS</td>
+										</tr>
+									</table>
 								</div>
-
-								<div class="col-2">
-									<div class="customForm"
-										style="margin-top: 27%; margin-left: 10%">
+							</div>
+							<div class="col-4">
+								<div style="margin-top: 10%">
+									<div>
 										<div>
-
-											<input type="text" name="description" id="describeAddedRide"
-												style="height: 100px; text-align: left;"
-												value="Add a description"
-												onblur="if (this.value == ''){this.value = 'Add a description'; }"
-												onfocus="if (this.value == 'Add a description') {this.value = '';}">
-											<br> <input type="text" name="book-cost" id="book-cost"
-												value="Book Rent Cost (no. of credits)"
-												onblur="if (this.value == ''){this.value = 'Book Rent Cost (no. of credits)'; }"
-												onfocus="if (this.value == 'Book Rent Cost (no. of credits)') {this.value = '';}">
+											<img src="../images/buttons/featured_book.png"></img>
+											<div style="float: right">
+												<a href="#"
+													onclick="$('#bookContent').load('content/books_search.html', function() {
+											$('.datetimepicker').timepicker();
+											});  
+											return false;"><h3
+														style="float: none; padding-top: 10%;">Featured</h3> </a>
+											</div>
 										</div>
 									</div>
-								</div>
-
-							</form>
-						</div>
-						<div class="col-4">
-							<div style="margin-top: 10%">
-								<div>
-									<img src="../images/buttons/add_book.png"></img>
-									<div style="float: right;">
-										<a href="#"
-											onclick="$('#addBookContent').load('books.html #addBookContent', 
+									<div>
+										<img src="../images/buttons/add_book.png"></img>
+										<div style="float: right;">
+											<a href="#"
+												onclick="$('#bookContent').load('content/add_books.html', 
 											function(){
 											$('.datetimepicker').timepicker();
 											});
 											return false;"><h3
-												style="float: left; padding-top: 10%;">
-												Add Books
-												</h2>
-										</a>
+													style="float: left; padding-top: 10%;">
+													Add Books
+													</h2>
+											</a>
+										</div>
+									</div>
+
+								</div>
+								<div>
+									<div>
+										<img src="../images/buttons/search_book.png"></img>
+										<div style="float: right">
+											<a href="#"
+												onclick="$('#addBookContent').load('content/books_search.html', function() {
+											$('.datetimepicker').timepicker();
+											});  
+											return false;"><h3
+													style="float: left; padding-top: 10%;">Find Books</h3> </a>
+										</div>
 									</div>
 								</div>
 
 							</div>
-							<div>
-								<div>
-									<img src="../images/buttons/search_book.png"></img>
-									<div style="float: right">
-										<a href="#"
-											onclick="$('#addBookContent').load('content/books_search.html', function() {
-											$('.datetimepicker').timepicker();
-											});  
-											return false;"><h3
-												style="float: left; padding-top: 10%;">Find Books</h3> </a>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
+
 				</div>
+
 			</section>
 
 
@@ -247,18 +235,25 @@
 							<div class="col-2">
 								<h4>Follow Us:</h4>
 								<ul class="list-services">
-									<li class="item-1"><a href="#">Facebook</a></li>
-									<li class="item-2"><a href="#">Twitter</a></li>
-									<li class="item-3"><a href="#">LinkedIn</a></li>
+									<li class="item-1"><a href="#">Facebook</a>
+									</li>
+									<li class="item-2"><a href="#">Twitter</a>
+									</li>
+									<li class="item-3"><a href="#">LinkedIn</a>
+									</li>
 								</ul>
 							</div>
 							<div class="col-3">
 								<h4>Why Us:</h4>
 								<ul class="list-1">
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Aonsect adipisic</a></li>
-									<li><a href="#">Eiusmjkod tempor</a></li>
-									<li><a href="#">Incididunt ut labore</a></li>
+									<li><a href="#">Lorem ipsum dolor</a>
+									</li>
+									<li><a href="#">Aonsect adipisic</a>
+									</li>
+									<li><a href="#">Eiusmjkod tempor</a>
+									</li>
+									<li><a href="#">Incididunt ut labore</a>
+									</li>
 								</ul>
 							</div>
 							<div class="col-4">

@@ -25,10 +25,10 @@
 
 /*books.html*/
 /* rides.html */
-#page-books #content .col-1 {width:292px;margin-right:9px}
-#page-books #content .col-2 {width:292px}
-#page-books #content .col-3 {width:650px;margin-right:45px}
-#page-books #content .col-4 {width:232px}
+#page-books #content .col-1 {width:500px;margin-right:45px}
+#page-books #content .col-2 {width:292px; }
+#page-books #content .col-3 {width:930px;margin-right:45px}
+#page-books #content .col-4 {width:232px; float:right;}
 #page-books #content {padding:12px 0}
 #page-books footer .col-1 {width:190px;margin-right:55px}
 #page-books footer .col-2 {width:110px;margin-right:55px}

@@ -1,0 +1,47 @@
+<form id="addBookForm" action="submit.php">
+								<div class="col-1">
+									<div class="customForm">
+
+										<h2>Add a Book</h2>
+
+										<p>
+											<input type="text" name="title" id="bookTitle"
+												value="Book Title"
+												onblur="if (this.value == ''){this.value = 'Book Title'; }"
+												onfocus="if (this.value == 'Book Title') {this.value = '';}">
+											<br> <input type="text" name="fromDate"
+												class="datetimepicker" value="From When"
+												onblur="if (this.value == ''){this.value = 'From When'; }"
+												onfocus="if (this.value == 'From When') {this.value = '';}">
+											<br> <input type="text" name="title" id="numberOfDays"
+												value="Rent Duration (in days)"
+												onblur="if (this.value == ''){this.value = 'Rent Duration (in days)'; }"
+												onfocus="if (this.value == 'Rent Duration (in days)') {this.value = '';}">
+										</p>
+										<p>
+											<input type="submit" name="addThisBook" class="submit"
+												value="Add This Book">
+										</p>
+
+									</div>
+								</div>
+
+								<div class="col-2">
+									<div class="customForm"
+										style="margin-top: 27%; margin-left: 10%">
+										<div>
+
+											<input type="text" name="description" id="describeAddedRide"
+												style="height: 100px; text-align: left;"
+												value="Add a description"
+												onblur="if (this.value == ''){this.value = 'Add a description'; }"
+												onfocus="if (this.value == 'Add a description') {this.value = '';}">
+											<br> <input type="text" name="book-cost" id="book-cost"
+												value="Book Rent Cost (no. of credits)"
+												onblur="if (this.value == ''){this.value = 'Book Rent Cost (no. of credits)'; }"
+												onfocus="if (this.value == 'Book Rent Cost (no. of credits)') {this.value = '';}">
+										</div>
+									</div>
+								</div>
+
+							</form>
