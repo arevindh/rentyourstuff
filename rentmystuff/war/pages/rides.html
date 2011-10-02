@@ -112,7 +112,7 @@
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
 					<div id="FBlogin" style="margin-left: 67%">
-						<a href=""><img src="../images/buttons/fb.png">
+						<a href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login"><img src="../images/buttons/fb.png">
 						</a>
 					</div>
 				</div>
@@ -293,5 +293,16 @@
 		</div>
 	</div>
 	<script type="text/javascript"> Cufon.now(); </script>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({
+    appId  : '220486511346030',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true, // parse XFBML
+    oauth  : true // enable OAuth 2.0
+  });
+</script>
 </body>
 </html>
