@@ -3,14 +3,14 @@ article, aside, audio, canvas, command, datalist, details, embed, figcaption, fi
 mark, rp, rt, ruby, summary, time {display:inline}
 /* Global properties */
 html {width:100%}
-body {font-family:Arial, Helvetica, sans-serif;font-size:100%;color:#9d9d9d;min-width:984px;background:url(../images/body.jpg) center 0 repeat}
+body {font-family:Arial, Helvetica, sans-serif;font-size:100%;color:#9d9d9d;min-width:984px;background:url("../images/body-bg.png") center 0 repeat-x;}
 .ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 a {color:#00a9ff;outline:none}
 a:hover {text-decoration:none}
 .col-1, .col-2, .col-3, .col-4  {float:left}
 .wrapper {width:100%;overflow:hidden}
 .extra-wrap {overflow:hidden}
-.bg {width:100%;background:url(../images/bg.jpg) center 0 no-repeat}
+.bg {width:100%;background:url("") center 0 no-repeat}
 .main {width:984px;padding:0;margin:0 auto;font-size:0.875em;line-height:1.285em}
 p {margin-bottom:18px}
 .p0 {margin-bottom:0px}
@@ -52,12 +52,12 @@ p {margin-bottom:18px}
 .buttons a:hover {cursor:pointer}
 .menu li a, .list-1 li a, .button-2, .logo {text-decoration:none}
 /* header */
-header {width:100%;margin-bottom:-16px;position:relative;z-index:1}
-.row-1 {width:100%;height:113px;overflow:hidden;padding-top:24px}
+header {width:100%;margin-bottom:-16px;position:relative;z-index:1; -moz-border-radius:18px 18px 0 0;-webkit-border-radius:18px 18px 0 0;  background-image: url("../images/body-bg.png"); overflow: hidden}
+.row-1 {width:100%;height:100px;overflow:hidden;padding-top:5px;}
 .row-2 {width:100%;min-height:85px;position:relative;z-index:1}
-.row-3 {width:100%;min-height:417px;position:relative;z-index:2}
-h1 {padding:0px 0 0 40px;position:relative;float:left}
-.logo {display:block;width:224px;height:45px;text-indent:-5000px;background:url(../images/rentmystuff.png) 0 0 no-repeat;margin:10px 0 8px 0}
+.row-3 {width:100%;min-height:217px;position:relative;z-index:2}
+h1 {padding:0px 0 0 10px;position:relative;float:left}
+.logo {display:block;width:224px;height:45px;text-indent:-5000px;background:url(../images/rentmystuff.png) 0 0 no-repeat;margin:5px 0 4px 0}
 .slog {display:block;font-size:14px;line-height:1.2em;color:#8a8a8a;text-transform:uppercase;letter-spacing:-1px}
 /* search-form */
 #search-form {width:244px;min-height:39px;padding:20px;margin-right:19px;background:#000;border-radius:18px;-moz-border-radius:18px;-webkit-border-radius:18px;float:right}
@@ -73,18 +73,18 @@ h1 {padding:0px 0 0 40px;position:relative;float:left}
 .menu li a.active, .menu li a:hover {color:#0f0f0f;background:#fff;padding:28px 0 36px;margin:0}
 /* slider */
 .slider-wrapper {overflow:hidden;width:984px;position:absolute;top:-16px;left:0;background:#fff;border-radius:0 18px 0 0;-moz-border-radius:0 18px 0 0;-webkit-border-radius:0 18px 0 0}
-.slider {height:403px;width:948px;margin:10px auto}
+.slider {height:203px;width:948px;margin:10px auto}
 .items {display:none}
 .pagination {position:absolute;top:0;z-index:999}
-.banner {width:400px;height:205px;position:absolute;top:92px;left:98px}
-.prev {display:block;width:22px;height:37px;text-indent:-5000px;position:absolute;left:25px;top:183px;z-index:99;background:url(../images/slider-control.png) left top no-repeat}
+.banner {width:400px;height:205px;position:absolute;top:46px;left:98px}
+.prev {display:block;width:22px;height:37px;text-indent:-5000px;position:absolute;left:25px;top:93px;z-index:99;background:url(../images/slider-control.png) left top no-repeat}
 .prev:hover {background-position:left bottom}
-.next {display:block;width:22px;height:37px;text-indent:-5000px;position:absolute;right:22px;top:183px;z-index:99;background:url(../images/slider-control.png) right top no-repeat}
+.next {display:block;width:22px;height:37px;text-indent:-5000px;position:absolute;right:22px;top:93px;z-index:99;background:url(../images/slider-control.png) right top no-repeat}
 .next:hover {background-position:right bottom}
-.b1 {color:#0f0f0f;font-size:50px;line-height:1.2em;display:block;letter-spacing:-3px}
-.b2 {color:#00a9ff;font-size:80px;line-height:1.2em;display:block;text-transform:uppercase;letter-spacing:-4px;margin:-12px 0 13px -5px}
-*+html .b2 {margin:-12px 0 5px -5px}
-.b3 {color:#0f0f0f;font-size:17px;line-height:1.2em;display:block}
+.b1 {color:#0f0f0f;font-size:25px;line-height:1.2em;display:block;letter-spacing:-1px;}
+.b2 {color:#00a9ff;font-size:40px;line-height:1.2em;display:block;text-transform:uppercase;letter-spacing:-4px;margin:-2px 0 13px -5px}
+*+html .b2 {margin:-2px 0 5px -5px}
+.b3 {color:#0f0f0f;font-size:10px;line-height:1.2em;display:block}
 /* content */
 #content {width:100%;padding:10px 0 40px;background:#fff;border-radius:18px 18px 0 0;-moz-border-radius:18px 18px 0 0;-webkit-border-radius:18px 18px 0 0;position:relative;z-index:2}
 #content .padding {padding:24px 12px 0}
@@ -170,6 +170,13 @@ table#featuredBooks td{ width:16%; text-align: center; vertical-align: middle;}
 table#featuredBooks td.title{width: 20%;}
 table#featuredBooks td.bookcover img{width:70px; height:90px; padding-right: 10px}
 table#featuredBooks td.title a{color: #FF6666; font-size: 15px; font-weight: bold;}
+
+/*LISTING FEATURED ELECTRONICS*/
+table#featuredElecs {width:100%; border:solid #000 3px; cellspacing:10px; cellpadding:5px }
+table#featuredElecs td{ width:16%; text-align: center; vertical-align: middle;}
+table#featuredElecs td.title{width: 20%;}
+table#featuredElecs td.bookcover img{width:70px; height:90px; padding-right: 10px}
+table#featuredElecs td.title a{color: #FF6666; font-size: 15px; font-weight: bold;}
 
 
 /* footer */

@@ -1,5 +1,5 @@
 /* home.html */
-#page1 header {margin-bottom:0}
+#page1 header {margin-bottom:0; width:100%}
 #page1 #content .padding {padding:0 12px}
 #page1 #content .col-1 {width:292px;margin-right:9px}
 #page1 #content .col-2 {width:292px}
@@ -24,7 +24,7 @@
 #page-rides #content .right-menu-right{width:65%; margin-top:25px; padding:5px 5px 5px 5px; float:right; overflow:hidden;}
 
 /*books.html*/
-/* rides.html */
+
 #page-books #content .col-1 {width:500px;margin-right:45px}
 #page-books #content .col-2 {width:292px; }
 #page-books #content .col-3 {width:930px;margin-right:45px}
@@ -37,6 +37,21 @@
 #page-books #content .right-menu-wrap{width:250px; margin-top:55px; overflow:hidden;}
 #page-books #content .right-menu-left{width:30%; margin-top:25px; padding:5px 5px 5px 5px; float:left; overflow:hidden;}
 #page-books #content .right-menu-right{width:65%; margin-top:25px; padding:5px 5px 5px 5px; float:right; overflow:hidden;}
+
+/* electronics.html */
+
+#page-elec #content .col-1 {width:500px;margin-right:45px}
+#page-elec #content .col-2 {width:292px; }
+#page-elec #content .col-3 {width:930px;margin-right:45px}
+#page-elec #content .col-4 {width:232px; float:right;}
+#page-elec #content {padding:12px 0}
+#page-elec footer .col-1 {width:190px;margin-right:55px}
+#page-elec footer .col-2 {width:110px;margin-right:55px}
+#page-elec footer .col-3 {width:140px;margin-right:65px}
+#page-elec footer .col-4 {width:235px}
+
+
+
 
 /* services.html */
 #page3 #content .col-1 {width:292px;margin-right:9px}
