@@ -8,7 +8,6 @@ import com.google.gson.*;
 
 import javax.crypto.*;
 import javax.crypto.spec.*;
-@SuppressWarnings("serial")
 public class FacebookCookieParser {
 
 	// return the fb user in the cookie.

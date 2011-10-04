@@ -1,45 +1,48 @@
 package rentmystuff;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
-import com.google.appengine.api.datastore.EntityNotFoundException;
 
-public class BookData extends DataEntity {
-	
+
+public class BookData  {
+	String ID;
 	String BookTitle;
 	String FromDate;
 	int NumberOfDays;
 	String Description;
 	int RentCost;
+	Entity entity;
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	
-	Entity bookDataEntity = new Entity("BookData", ID);
-	
-	
+	public BookData(String test) {
+		BookTitle = test;
+	}
+	/*
 	public BookData(String id, String bookTitle, String fromDate, int numberOfDays,
 			String description, int rentCost) {
 		ID=id;
-		BookTitle = bookTitle;
-		FromDate = fromDate;
-		NumberOfDays = numberOfDays;
-		Description = description;
-		RentCost = rentCost;
-		
-		bookDataEntity.setProperty("ItemId", ID);
-		bookDataEntity.setProperty("BookTitle", BookTitle);
-		bookDataEntity.setProperty("FromDate", FromDate);
-		bookDataEntity.setProperty("NumberOfDays", NumberOfDays);
-		bookDataEntity.setProperty("Description", Description);
-		bookDataEntity.setProperty("RentCost", RentCost);
+		this.BookTitle = bookTitle;
+		this.FromDate = fromDate;
+		this.NumberOfDays = numberOfDays;
+		this.Description = description;
+		this.RentCost = rentCost;
+		this.entity = new Entity("sdsad");
+		entity.setProperty("ItemId", ID);
+		entity.setProperty("BookTitle", BookTitle);
+		entity.setProperty("FromDate", FromDate);
+		entity.setProperty("NumberOfDays", NumberOfDays);
+		entity.setProperty("Description", Description);
+		entity.setProperty("RentCost", RentCost);
 		
 	}
+	*/
+	public boolean putData() {
+		return true;
+	}
 
-
-	@Override
 	public ArrayList<DataEntity> getData() {
 		
 		return null;

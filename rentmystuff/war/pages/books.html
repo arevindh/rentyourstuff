@@ -48,9 +48,9 @@
   
   //FORM SUBMIT THROUGH AJAX
   var options = { 
-        target:        '#output2',   // target element(s) to be updated with server response 
-        beforeSubmit:  showRequest,  // pre-submit callback 
-        //success:       showResponse  // post-submit callback 
+        target:        'bookContent',   // target element(s) to be updated with server response 
+        //beforeSubmit:  showRequest,  // pre-submit callback 
+        success:       showResponse  // post-submit callback 
  
         // other available options: 
         //url:       url         // override for form's 'action' attribute 
@@ -87,6 +87,8 @@
  
     // here we could return false to prevent the form from being submitted; 
     // returning anything other than false will allow the form submit to continue 
+    
+    $('bookContent').load('content/success.html');
     return true; 
 } 
   </script>
