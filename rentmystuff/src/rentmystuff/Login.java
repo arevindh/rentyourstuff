@@ -49,7 +49,7 @@ public class Login extends HttpServlet {
 				User.setProperty("LastAuthToken",AuthToken);
 				DataStore.put(User);
 			}
-			resp.sendRedirect(resp.encodeURL("http://share-group.appspot.com/pages/rides.jsp?AuthToken="+AuthToken));
+			resp.sendRedirect(resp.encodeURL("http://share-group.appspot.com/index.jsp?AuthToken="+AuthToken));
 			//resp.getWriter().println("AuthResponse:"+AuthToken+" Code:"+code+" UserID:"+UserID+" Name:"+Name);			
 		}
 	}

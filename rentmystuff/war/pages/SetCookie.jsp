@@ -10,7 +10,7 @@
     xfbml  : true, // parse XFBML
     oauth  : true // enable OAuth 2.0
   });
-  window.location = "http://share-group.appspot.com/pages/rides.jsp";
+  window.location = "http://share-group.appspot.com/index.jsp";
 </script>
 </body>
 </html>

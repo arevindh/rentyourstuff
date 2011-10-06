@@ -131,7 +131,7 @@
 						<a class="logo" href="../index.jsp">RentMyStuff</a> <strong
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
-					<div id="FBlogin" style="margin-left: 67%">
+					<div id="FBlogin">
 						<% if(UserID==null) { %>
 						<a
 							href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login">
