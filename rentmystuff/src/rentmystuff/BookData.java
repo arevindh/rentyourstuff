@@ -15,7 +15,7 @@ public class BookData  {
 	String Description;
 	int RentCost;
 	Entity entity;
-	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	//DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	
 	public BookData(String test) {
 		BookTitle = test;
@@ -43,9 +43,6 @@ public class BookData  {
 		return true;
 	}
 
-	public ArrayList<DataEntity> getData() {
-		
-		return null;
-	}
+
 
 }

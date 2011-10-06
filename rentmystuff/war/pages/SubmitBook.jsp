@@ -3,9 +3,14 @@
 <%@ page import="rentmystuff.*"%>
 <%
 System.out.println("here");
-	BookData book = new BookData("asdfadsf");
-	response.getWriter().println(request.getParameter("bookTitle"));
-	
+	//BookData book = new BookData("asdfadsf");
+	//response.getWriter().println(request.getParameter("bookTitle"));
+	//rentmystuff.DataEntityharami d = new rentmystuff.DataEntityharami();
+	DataEntity d = new DataEntity();
+	BookData bd = new BookData("adfadsf");
+	//String s = new String("adsfasdf");
+	//BookData bd
+	//Myclass mc = new Myclass();
 	/*
 	BookData book = new BookData("111",
 			request.getParameter("bookTitle"),

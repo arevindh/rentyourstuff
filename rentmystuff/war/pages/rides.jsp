@@ -111,7 +111,7 @@
 			<header>
 				<div class="row-1">
 					<h1>
-						<a class="logo" href="../index.html">RentMyStuff</a> <strong
+						<a class="logo" href="../index.jsp">RentMyStuff</a> <strong
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
 					<div id="FBlogin" style="margin-left: 67%">
@@ -125,11 +125,11 @@
 				<div class="row-2">
 					<nav>
 						<ul class="menu">
-							<li><a href="../index.html">Home Page</a></li>
-							<li><a class="active" href="rides.html">Rides</a></li>
-							<li><a href="books.html">Books</a></li>
-							<li><a href="electronics.html">Electronics</a></li>
-							<li class="last-item"><a href="misc.html">Miscellaneous</a>
+							<li><a href="../index.jsp">Home Page</a></li>
+							<li><a class="active" href="rides.jsp">Rides</a></li>
+							<li><a href="books.jsp">Books</a></li>
+							<li><a href="electronics.jsp">Electronics</a></li>
+							<li class="last-item"><a href="misc.jsp">Miscellaneous</a>
 							</li>
 						</ul>
 					</nav>
@@ -207,7 +207,7 @@
 									<img src="../images/buttons/add_ride.png"></img>
 									<div style="float: right;">
 										<a href="#"
-											onclick="$('#addRideContent').load('rides.html #addRideContent', function(){
+											onclick="$('#addRideContent').load('rides.jsp #addRideContent', function(){
 											$('#datetimepicker').timepicker();
 											initialize('fromAdd', 'toAdd');});return false;"><h3
 												style="float: left; padding-top: 10%;">
@@ -223,14 +223,14 @@
 									<img src="../images/buttons/search_ride.png"></img>
 									<div style="float: right">
 										<a href="#"
-											onclick="$('#addRideContent').load('content/rides_search.html', function() {
+											onclick="$('#addRideContent').load('content/rides_search.jsp', function() {
 											$('#datetimepicker').timepicker();
 											initialize('fromSearch', 'toSearch');});  return false;"><h3
 												style="float: left; padding-top: 10%;">Find Rides</h3> </a>
 
 									</div>
 								</div>
-								<!--  <a href="#" onclick='$("addRideContent").load("../test.html");'><h2>aa</h2></a>-->
+								<!--  <a href="#" onclick='$("addRideContent").load("../test.jsp");'><h2>aa</h2></a>-->
 							</div>
 
 						</div>
