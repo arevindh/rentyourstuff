@@ -27,7 +27,7 @@
 			</p>
 			<p>
 				<input type="submit" name="resolveAction" class="submit"
-					value="Add Item">
+					value="Add Gadget">
 			</p>
 
 		</div>
