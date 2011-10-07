@@ -1,5 +1,4 @@
-
-<form id="addBookForm" action="SubmitBook.jsp">
+<form id="addBookForm" action="Submit.jsp">
 	<div class="col-1">
 		<h2>Add a Book</h2>
 		<div class="customForm">
