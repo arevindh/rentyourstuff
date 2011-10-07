@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="rentmystuff.FacebookCookieParser" %>
@@ -141,7 +140,7 @@
 				<div class="padding">
 					<div class="wrapper p4">
 						<div class="col-3" id="addRideContent">
-							<form id="addRideForm" action="submit.php">
+							<form id="addRideForm" action="Submit.jsp">
 								<div class="col-1">
 									<div class="customForm">
 
@@ -174,7 +173,7 @@
 
 										</p>
 										<p>
-											<input type="submit" name="addThisRide" class="submit"
+											<input type="submit" name="resolve" class="submit"
 												value="Add This Ride">
 										</p>
 
