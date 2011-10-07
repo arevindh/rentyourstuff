@@ -7,29 +7,29 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 
 
-public class BookData  {
-	String ID;
+public class BookData extends DataEntity {
+	
 	String BookTitle;
 	String FromDate;
 	int NumberOfDays;
 	String Description;
 	int RentCost;
-	Entity entity;
-	//DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	
+	
 	
 	public BookData(String test) {
 		BookTitle = test;
 	}
-	/*
+	
 	public BookData(String id, String bookTitle, String fromDate, int numberOfDays,
 			String description, int rentCost) {
-		ID=id;
+		ID=id;		
 		this.BookTitle = bookTitle;
 		this.FromDate = fromDate;
 		this.NumberOfDays = numberOfDays;
 		this.Description = description;
 		this.RentCost = rentCost;
-		this.entity = new Entity("sdsad");
+		this.entity = new Entity("Book");
 		entity.setProperty("ItemId", ID);
 		entity.setProperty("BookTitle", BookTitle);
 		entity.setProperty("FromDate", FromDate);
@@ -38,11 +38,6 @@ public class BookData  {
 		entity.setProperty("RentCost", RentCost);
 		
 	}
-	*/
-	public boolean putData() {
-		return true;
-	}
-
-
-
+	
+	
 }

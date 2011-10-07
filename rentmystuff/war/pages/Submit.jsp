@@ -18,18 +18,20 @@
 	book.putData();
    } else if (action=="Add Gadget"){
       String GadgetID = "genGadgetID";
+      
       ElecData gadget = new ElecData(GadgetID,
                                 request.getParameter("gadgetName"),
                                 request.getParameter("fromDate"), 
                                 Integer.parseInt(request.getParameter("numberOfDays")),
                                 request.getParameter("description"),
-                                Integer.parseInt(request.getParameter("book-cost")));
+                                Integer.parseInt(request.getParameter("item-cost")));
       gadget.putData();
    
    } else if (action=="Add This Ride"){
      String RideID = "genRideId";
+     
      RideData ride = new RideData(RideID,
-                                  request.getParamater("from"),
+                                  request.getParameter("from"),
                                   request.getParameter("to"),
                                   request.getParameter("date"),
                                   Integer.parseInt(request.getParameter("seats")),
@@ -41,9 +43,14 @@
    
 	
 %>
-<html>
-<div class="col-1">
-	<span style="font-size: 20px">Book added successfully. This will be published
-	to your trust circle.</span>
-</div>
-</html>
+<%
+response.setContentType("text/html");
+response.getWriter().println("<div class=\"col-1\">");
+response.getWriter().println("<span style=\"font-size: 20px\">Book added successfully. This will be published to your trust circle.</span>");
+response.getWriter().println("</div>");
+%>
+
+
+	
+
+

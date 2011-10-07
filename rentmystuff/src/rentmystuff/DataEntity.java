@@ -1,25 +1,22 @@
 package rentmystuff;
 
 
-//import java.util.ArrayList;
-//import com.google.appengine.api.datastore.DatastoreService;
-//import com.google.appengine.api.datastore.DatastoreServiceFactory;
-//import com.google.appengine.api.datastore.Entity;
+import java.util.ArrayList;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
 
 public class DataEntity {
 	String ID;
-	//DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	//Entity entity;
+	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	Entity entity;
+	
 	//public abstract ArrayList<DataEntity> getData();
 	
-	public DataEntity() {
-		ID ="asdf";
-	}
-	/*
 	public boolean putData (){
 		datastore.put(entity);
 		return true;
 	}
-	*/
+	
 
 }
