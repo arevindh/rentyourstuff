@@ -1,4 +1,3 @@
-
 <form id="addElecForm" action="submit.php">
 	<div class="col-1">
 		<h2>Add an Electronic Item</h2>
@@ -27,7 +26,7 @@
 
 			</p>
 			<p>
-				<input type="submit" name="addThisBook" class="submit"
+				<input type="submit" name="resolveAction" class="submit"
 					value="Add This Book">
 			</p>
 
