@@ -2,27 +2,44 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="rentmystuff.*"%>
 <%
-System.out.println("here");
-	//BookData book = new BookData("asdfadsf");
-	//response.getWriter().println(request.getParameter("bookTitle"));
-	//rentmystuff.DataEntityharami d = new rentmystuff.DataEntityharami();
-	DataEntity d = new DataEntity();
-	BookData bd = new BookData("adfadsf");
-	//String s = new String("adsfasdf");
-	//BookData bd
-	//Myclass mc = new Myclass();
-	/*
-	BookData book = new BookData("111",
-			request.getParameter("bookTitle"),
-			request.getParameter("fromDate"), 
-			Integer.parseInt(request.getParameter("numberOfDays")),
-			request.getParameter("description"),
-			Integer.parseInt(request.getParameter("book-cost")));
-	*/
-	/*	
+  String action = request.getParameter("resolveAction");
+  
+  //delegating action based upon type of form submitted
+  if(action=="Add This Book"){
+   String BookID = "genBookId";
+   BookData book = new BookData(BookID,
+                                request.getParameter("bookTitle"),
+                                request.getParameter("fromDate"), 
+                                Integer.parseInt(request.getParameter("numberOfDays")),
+                                request.getParameter("description"),
+                                Integer.parseInt(request.getParameter("book-cost")));
+	
+	//Saving the book to dataStore  
 	book.putData();
-	System.out.println(book.toString());
-*/
+   } else if (action=="Add Gadget"){
+      String GadgetID = "genGadgetID";
+      ElecData gadget = new ElecData(GadgetID,
+                                request.getParameter("gadgetName"),
+                                request.getParameter("fromDate"), 
+                                Integer.parseInt(request.getParameter("numberOfDays")),
+                                request.getParameter("description"),
+                                Integer.parseInt(request.getParameter("book-cost")));
+      gadget.putData();
+   
+   } else if (action=="Add This Ride"){
+     String RideID = "genRideId";
+     RideData ride = new RideData(RideID,
+                                  request.getParamater("from"),
+                                  request.getParameter("to"),
+                                  request.getParameter("date"),
+                                  Integer.parseInt(request.getParameter("seats")),
+                                  request.getParameter("description"),
+                                  Integer.parseInt(request.getParameter("ride-cost")));    
+     //Saving the RIDE to dataStore  
+      ride.putData();
+   }
+   
+	
 %>
 <html>
 <div class="col-1">
