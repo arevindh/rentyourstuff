@@ -12,7 +12,7 @@
 	media="screen">
 <link rel="stylesheet" href="../css/layout.css" type="text/css"
 	media="screen">
-<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
 <link
 	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
 	rel="stylesheet" type="text/css" />
@@ -90,7 +90,7 @@
     // here we could return false to prevent the form from being submitted; 
     // returning anything other than false will allow the form submit to continue 
     return true; 
-} 
+} );
   </script>
 
 <!--[if lt IE 7]>

@@ -12,7 +12,7 @@
 	media="screen">
 <link rel="stylesheet" href="css/layout.css" type="text/css"
 	media="screen">
-<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
 <script src="js/cufon-yui.js" type="text/javascript"></script>
 <script src="js/cufon-replace.js" type="text/javascript"></script>
 <script src="js/Open_Sans_400.font.js" type="text/javascript"></script>

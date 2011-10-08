@@ -13,7 +13,7 @@
 	media="screen">
 <link rel="stylesheet" href="../css/layout.css" type="text/css"
 	media="screen">
-<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
 <link
 	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
 	rel="stylesheet" type="text/css" />
@@ -24,7 +24,6 @@
 <script src="../js/Open_Sans_Semibold_600.font.js"
 	type="text/javascript"></script>
 <script src="../js/FF-cash.js" type="text/javascript"></script>
-<script src="../js/searchrides.js" type="text/javascript"></script>
 <script type="text/javascript" src="../js/jquery.form.js"></script>
 
 <!--INSERT ALL CDN JS REFS HERE-->
@@ -47,9 +46,11 @@
 <script>
 
   $(document).ready(function() {
-  $(".datetimepicker").timepicker();
-  initialize("fromAdd", "toAdd");
-
+  
+  alert('11');
+  formInitialize();
+  alert('2');
+});
 </script>
 
 <!--[if lt IE 7]>
@@ -126,9 +127,8 @@
 											<a href="#"
 												onclick="$('#bookContent').load('content/add_books.jsp', 
 											function(){
-											formInitialize();
 											$('.datetimepicker').timepicker();
-											
+											formInitialize();
 											});
 											return false;"><h3
 													style="float: left; padding-top: 10%;">

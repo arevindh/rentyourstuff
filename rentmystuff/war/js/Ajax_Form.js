@@ -1,6 +1,7 @@
 function formInitialize(){
+	alert("here");
 	//FORM SUBMIT THROUGH AJAX
-	alert('here');
+	
 	  var options = { 
 	        target:        'bookContent',   // target element(s) to be updated with server response 
 	        //beforeSubmit:  showRequest,  // pre-submit callback 
