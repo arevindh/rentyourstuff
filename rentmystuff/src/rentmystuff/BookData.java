@@ -1,43 +1,23 @@
 package rentmystuff;
 
 
-import java.util.ArrayList;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 
-
-public class BookData extends DataEntity {
+public class BookData {
 	
-	String BookTitle;
-	String FromDate;
-	int NumberOfDays;
-	String Description;
-	int RentCost;
+	Entity bookdata;
 	
-	
-	
-	public BookData(String test) {
-		BookTitle = test;
+	public BookData(String UserID, String bookTitle, String fromDate, int numberOfDays,String description, int rentCost) {
+		bookdata = new Entity("Book",bookTitle+"_"+UserID);
+		bookdata.setProperty("User", UserID);
+		bookdata.setProperty("BookTitle", bookTitle);
+		bookdata.setProperty("FromDate", fromDate);
+		bookdata.setProperty("NumberOfDays", numberOfDays);
+		bookdata.setProperty("Description", description);
+		bookdata.setProperty("RentCost", rentCost);
+		DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
+		DataStore.put(bookdata);
 	}
-	
-	public BookData(String id, String bookTitle, String fromDate, int numberOfDays,
-			String description, int rentCost) {
-		ID=id;		
-		this.BookTitle = bookTitle;
-		this.FromDate = fromDate;
-		this.NumberOfDays = numberOfDays;
-		this.Description = description;
-		this.RentCost = rentCost;
-		this.entity = new Entity("Book");
-		entity.setProperty("ItemId", ID);
-		entity.setProperty("BookTitle", BookTitle);
-		entity.setProperty("FromDate", FromDate);
-		entity.setProperty("NumberOfDays", NumberOfDays);
-		entity.setProperty("Description", Description);
-		entity.setProperty("RentCost", RentCost);
-		
-	}
-	
-	
 }

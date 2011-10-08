@@ -7,7 +7,7 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 
 public class DataEntity {
-	String ID;
+	String id;
 	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	Entity entity;
 	
