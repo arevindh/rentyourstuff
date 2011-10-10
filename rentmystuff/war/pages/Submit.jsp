@@ -14,9 +14,8 @@
 <%
 
 	String AuthToken = request.getParameter("AuthToken"); 
-	DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
 	String UserID = null;
-
+	DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
 	if(AuthToken != null ) {
 		Query AuthTokenQuery = new Query("User");
 		AuthTokenQuery.addFilter("LastAuthToken", Query.FilterOperator.EQUAL, AuthToken);
@@ -43,43 +42,39 @@
 			}
 		}
 	}
+	//temp test fix as user is not logged in 
+	UserID = "testid";
+	
 	
   String action = request.getParameter("resolveAction");
   
   //delegating action based upon type of form submitted
-  if(action=="Add This Book"){
+  if(action.equals("Add This Book")){
+	  
    BookData book = new BookData(UserID,
                                 request.getParameter("bookTitle"),
                                 request.getParameter("fromDate"), 
                                 Integer.parseInt(request.getParameter("numberOfDays")),
                                 request.getParameter("description"),
   	                            Integer.parseInt(request.getParameter("book-cost")));
-   } else if (action=="Add Gadget"){
-      String GadgetID = "genGadgetID";
-      
-      ElecData gadget = new ElecData(GadgetID,
+   } else if (action.equals("Add Gadget")){
+     
+	   ElecData gadget = new ElecData(UserID,
                                 request.getParameter("gadgetName"),
                                 request.getParameter("fromDate"), 
                                 Integer.parseInt(request.getParameter("numberOfDays")),
                                 request.getParameter("description"),
                                 Integer.parseInt(request.getParameter("item-cost")));
-      gadget.putData();
-   
-   } else if (action=="Add This Ride"){
-     String RideID = "genRideId";
-     
-     RideData ride = new RideData(RideID,
+   } else if (action.equals("Add This Ride")){
+     RideData ride = new RideData(UserID,
                                   request.getParameter("from"),
                                   request.getParameter("to"),
                                   request.getParameter("date"),
                                   Integer.parseInt(request.getParameter("seats")),
                                   request.getParameter("description"),
                                   Integer.parseInt(request.getParameter("ride-cost")));    
-     //Saving the RIDE to dataStore  
-      ride.putData();
    }
-   
-	
+
 %>
 <%
 response.setContentType("text/html");

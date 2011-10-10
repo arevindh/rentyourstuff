@@ -1,31 +1,26 @@
 package rentmystuff;
 
-public class ElecData extends DataEntity {
-	
-	String ElecName;
-	String FromDate;
-	int NumberOfDays;
-	String Description;
-	int RentCost;
-	
-	public ElecData(String id, String elecName, String fromDate, int numberOfDays,
-			String description, int rentCost) {
-		super();
-		ID=id;
-		ElecName = elecName;
-		FromDate = fromDate;
-		NumberOfDays = numberOfDays;
-		Description = description;
-		RentCost = rentCost;
-		
-		entity.setProperty("ItemId", ID);
-		entity.setProperty("ElecName", ElecName);
-		entity.setProperty("FromDate", FromDate);
-		entity.setProperty("NumberOfDays", NumberOfDays);
-		entity.setProperty("Description", Description);
-		entity.setProperty("RentCost", RentCost);
-	}
-	
-	
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
 
+public class ElecData{
+	
+	Entity elecdata;
+	
+	public ElecData(String UserID, String elecName, String fromDate, int numberOfDays,
+			String description, int rentCost) {
+		
+		elecdata = new Entity("Gadget",elecName+"_"+UserID);
+		elecdata.setProperty("User", UserID);
+		elecdata.setProperty("ElecName", elecName);
+		elecdata.setProperty("FromDate", fromDate);
+		elecdata.setProperty("NumberOfDays", numberOfDays);
+		elecdata.setProperty("Description", description);
+		elecdata.setProperty("RentCost", rentCost);
+		DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
+		System.err.println("here");
+		DataStore.put(elecdata);
+	
+	}
 }

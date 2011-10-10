@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="rentmystuff.FacebookCookieParser" %>
-<%@include file="UserCheck.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page import="rentmystuff.FacebookCookieParser"%>
+<%@include file="UserCheck.jsp"%>
 <html lang="en">
 <head>
 <title></title>
@@ -114,11 +114,21 @@
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
 					<div id="FBlogin">
-					<% if(UserID==null) { %>
-						<a href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login"><img src="../images/buttons/fb.png">
-						</a>
-					<% } else { %>
-					<h4> Hello <%=UserID%> </h4> <%} %>
+						<%
+							if (UserID == null) {
+						%>
+						<a
+							href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login"><img
+							src="../images/buttons/fb.png"> </a>
+						<%
+							} else {
+						%>
+						<h4>
+							Hello <%=UserID%>
+						</h4>
+						<%
+							}
+						%>
 					</div>
 				</div>
 				<div class="row-2">
@@ -128,8 +138,7 @@
 							<li><a class="active" href="rides.jsp">Rides</a></li>
 							<li><a href="books.jsp">Books</a></li>
 							<li><a href="electronics.jsp">Electronics</a></li>
-							<li class="last-item"><a href="misc.jsp">Miscellaneous</a>
-							</li>
+							<li class="last-item"><a href="misc.jsp">Miscellaneous</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -140,65 +149,20 @@
 				<div class="padding">
 					<div class="wrapper p4">
 						<div class="col-3" id="addRideContent">
-							<form id="addRideForm" action="Submit.jsp">
-								<div class="col-1">
-									<div class="customForm">
+							<%
+								if (UserID == null) {
+							%>
+							<p>Please login with Facebook to see all available rides for you.</p>
+							<%
+								} else {
+							%>
+							<%
+								pageContext.include("rides/FeaturedRidesList.jsp");
+							%>
+							<%
+								}
+							%>
 
-										<h2>Add a Ride</h2>
-
-										<p>
-											<input type="text" name="from" id="fromAdd"
-												value="From where"
-												onblur="if (this.value == ''){this.value = 'From where'; }"
-												onfocus="if (this.value == 'From where') {this.value = '';}">
-											<br> <input type="text" name="to" id="toAdd"
-												value="To where"
-												onblur="if (this.value == ''){this.value = 'To where'; }"
-												onfocus="if (this.value == 'To where') {this.value = '';}">
-
-											<input type="text" name="date" id="datetimepicker"
-												value="Select Date & Time"
-												onblur="if (this.value == ''){this.value = 'Select Date & Time'; }"
-												onfocus="if (this.value == 'Select Date & Time') {this.value = '';}">
-											<br> <select name="seats"
-												style="clear: left; padding-top: 2px">
-												<option value="" selected>Select Number of Seats</option>
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-											</select>
-
-										</p>
-										<p>
-											<input type="submit" name="resolve" class="submit"
-												value="Add This Ride">
-										</p>
-
-									</div>
-								</div>
-
-								<div class="col-2">
-									<div class="customForm"
-										style="margin-top: 27%; margin-left: 10%">
-										<div>
-
-											<input type="text" name="description" id="describeAddedRide"
-												style="height: 100px; text-align: left;"
-												value="Add a description"
-												onblur="if (this.value == ''){this.value = 'Add a description'; }"
-												onfocus="if (this.value == 'Add a description') {this.value = '';}">
-											<br> <input type="text" name="ride-cost" id="ride-cost"
-												value="Ride Cost (no. of credits)"
-												onblur="if (this.value == ''){this.value = 'Ride Cost (no. of credits)'; }"
-												onfocus="if (this.value == 'Ride Cost (no. of credits)') {this.value = '';}">
-										</div>
-									</div>
-								</div>
-
-							</form>
 						</div>
 						<div class="col-4">
 							<div style="margin-top: 10%">
@@ -206,13 +170,18 @@
 									<img src="../images/buttons/add_ride.png"></img>
 									<div style="float: right;">
 										<a href="#"
-											onclick="$('#addRideContent').load('rides.jsp #addRideContent', function(){
-											$('#datetimepicker').timepicker();
-											initialize('fromAdd', 'toAdd');});return false;"><h3
+											onclick='
+											$("#addRideContent").empty().html("<img src=\"../images/loading.gif\"></img>");
+											$("#addRideContent").load("rides/add_rides.jsp", 
+											function(){
+											$("#datetimepicker").timepicker();
+											initialize("fromAdd", "toAdd");
+											});
+											return false;													
+											'><h3
 												style="float: left; padding-top: 10%;">
 												Add Rides
-												</h2>
-										</a>
+												</h2></a>
 									</div>
 								</div>
 
@@ -298,9 +267,9 @@
 		</div>
 	</div>
 	<script type="text/javascript"> Cufon.now(); </script>
-<div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
+	<div id="fb-root"></div>
+	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script>
   FB.init({
     appId  : '220486511346030',
     status : true, // check login status

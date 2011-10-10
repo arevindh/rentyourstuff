@@ -149,10 +149,7 @@
 												onclick="$('#elecContent').load('content/add_electronics.jsp', 
 											function(){
 											$('.datetimepicker').timepicker();
-											}, alert('data');
-											var data = 'Core Selectors Attributes Traversing Manipulation CSS Events Effects Ajax Utilities'.split('');
-											alert(data);
-											$('#elecTitle').autocomplete(data););
+											});
 											return false;"><h3
 													style="float: left; padding-top: 10%;">
 													Add Items
