@@ -12,7 +12,7 @@
 	media="screen">
 <link rel="stylesheet" href="css/layout.css" type="text/css"
 	media="screen">
-<script type="text/javascript" src="../js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 <script src="js/cufon-yui.js" type="text/javascript"></script>
 <script src="js/cufon-replace.js" type="text/javascript"></script>
 <script src="js/Open_Sans_400.font.js" type="text/javascript"></script>
@@ -22,10 +22,23 @@
 <script type="text/javascript" src="js/tms_presets.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script src="js/FF-cash.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/PageLoader.js"></script>
+<script src="js/searchrides.js" type="text/javascript"></script>
+<script src="js/timepicker.js" type="text/javascript"></script>
 
 <!--INSERT ALL CDN js REFERENCES HERE-->
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+<script
+	src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"
+	type="text/javascript"></script>
+
 </head>
 
 <!--[if lt IE 7]>
@@ -54,12 +67,14 @@
 						%>
 						<a
 							href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login">
-							<img src="../images/buttons/fb.png"> </a>
+							<img src="../images/buttons/fb.png">
+						</a>
 						<%
 							} else {
 						%>
 						<h4>
-							Hello <%=UserID%>
+							Hello
+							<%=UserID%>
 						</h4>
 						<%
 							}
@@ -78,7 +93,7 @@
 					<nav>
 						<ul class="menu">
 							<li><a class="active" href="index.jsp">Home Page</a></li>
-							<li><a href="pages/rides.jsp">Rides</a></li>
+							<li><a href="#" onclick='loadRides();'>Rides</a></li>
 							<li><a href="pages/books.jsp">Books</a></li>
 							<li><a href="pages/electronics.jsp">Electronics</a></li>
 							<li class="last-item"><a href="pages/contacts.html">Miscellaneous</a></li>
@@ -114,78 +129,78 @@
 			<!-- content -->
 			<section id="content">
 				<div class="padding">
-					<div class="box-bg margin-bot">
-						<div class="wrapper">
-							<div class="col-1">
-								<div class="box first">
-									<div class="pad">
-										<div class="wrapper indent-bot">
-											<strong class="numb img-indent2">01</strong>
-											<div class="extra-wrap">
-												<h3 class="color-1">
-													<strong>Careful</strong>Analysis
-												</h3>
-											</div>
-										</div>
-										<div class="wrapper">
-											<a class="button img-indent-r" href="#">>></a>
-											<div class="extra-wrap">
-												Point.co is one of <a class="link" target="_blank"
-													href="http://blog.templatemonster.com/free-website-templates/ ">free
-													website templates</a> created by TemplateMonster.com.
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-1">
-								<div class="box second">
-									<div class="pad">
-										<div class="wrapper indent-bot">
-											<strong class="numb img-indent2">02</strong>
-											<div class="extra-wrap">
-												<h3 class="color-2">
-													<strong>Quick</strong>Research
-												</h3>
-											</div>
-										</div>
-										<div class="wrapper">
-											<a class="button img-indent-r" href="#"></a>
-											<div class="extra-wrap">
-												This <a class="link" target="_blank"
-													href="http://blog.templatemonster.com/2011/06/13/free-website-template-jquery-slider/ ">Template</a>
-												goes with two packages â with PSD files and without them.
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-2">
-								<div class="box third">
-									<div class="pad">
-										<div class="wrapper indent-bot">
-											<strong class="numb img-indent2">03</strong>
-											<div class="extra-wrap">
-												<h3 class="color-3">
-													<strong>New</strong>Strategies
-												</h3>
-											</div>
-										</div>
-										<div class="wrapper">
-											<a class="button img-indent-r" href="#">>></a>
-											<div class="extra-wrap">
-												It has several pages: <a class="link" href="index.jsp">Home</a>,
-												<a class="link" href="news.jsp">News</a>, <a class="link"
-													href="services.html">Services</a>, <a class="link"
-													href="products.html">Products</a>, <a class="link"
-													href="contacts.html">Contacts</a>.
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<!-- 					<div class="box-bg margin-bot"> -->
+					<!-- 						<div class="wrapper"> -->
+					<!-- 							<div class="col-1"> -->
+					<!-- 								<div class="box first"> -->
+					<!-- 									<div class="pad"> -->
+					<!-- 										<div class="wrapper indent-bot"> -->
+					<!-- 											<strong class="numb img-indent2">01</strong> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												<h3 class="color-1"> -->
+					<!-- 													<strong>Careful</strong>Analysis -->
+					<!-- 												</h3> -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 										<div class="wrapper"> -->
+					<!-- 											<a class="button img-indent-r" href="#">>></a> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												Point.co is one of <a class="link" target="_blank" -->
+					<!-- 													href="http://blog.templatemonster.com/free-website-templates/ ">free -->
+					<!-- 													website templates</a> created by TemplateMonster.com. -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 									</div> -->
+					<!-- 								</div> -->
+					<!-- 							</div> -->
+					<!-- 							<div class="col-1"> -->
+					<!-- 								<div class="box second"> -->
+					<!-- 									<div class="pad"> -->
+					<!-- 										<div class="wrapper indent-bot"> -->
+					<!-- 											<strong class="numb img-indent2">02</strong> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												<h3 class="color-2"> -->
+					<!-- 													<strong>Quick</strong>Research -->
+					<!-- 												</h3> -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 										<div class="wrapper"> -->
+					<!-- 											<a class="button img-indent-r" href="#"></a> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												This <a class="link" target="_blank" -->
+					<!-- 													href="http://blog.templatemonster.com/2011/06/13/free-website-template-jquery-slider/ ">Template</a> -->
+					<!-- 												goes with two packages â with PSD files and without them. -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 									</div> -->
+					<!-- 								</div> -->
+					<!-- 							</div> -->
+					<!-- 							<div class="col-2"> -->
+					<!-- 								<div class="box third"> -->
+					<!-- 									<div class="pad"> -->
+					<!-- 										<div class="wrapper indent-bot"> -->
+					<!-- 											<strong class="numb img-indent2">03</strong> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												<h3 class="color-3"> -->
+					<!-- 													<strong>New</strong>Strategies -->
+					<!-- 												</h3> -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 										<div class="wrapper"> -->
+					<!-- 											<a class="button img-indent-r" href="#">>></a> -->
+					<!-- 											<div class="extra-wrap"> -->
+					<!-- 												It has several pages: <a class="link" href="index.jsp">Home</a>, -->
+					<!-- 												<a class="link" href="news.jsp">News</a>, <a class="link" -->
+					<!-- 													href="services.html">Services</a>, <a class="link" -->
+					<!-- 													href="products.html">Products</a>, <a class="link" -->
+					<!-- 													href="contacts.html">Contacts</a>. -->
+					<!-- 											</div> -->
+					<!-- 										</div> -->
+					<!-- 									</div> -->
+					<!-- 								</div> -->
+					<!-- 							</div> -->
+					<!-- 						</div> -->
+					<!-- 					</div> -->
 					<div class="wrapper">
 						<div class="col-3">
 							<div class="indent">
@@ -241,6 +256,7 @@
 						</div>
 					</div>
 				</div>
+
 			</section>
 
 

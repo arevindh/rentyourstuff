@@ -198,7 +198,7 @@
 
 									</div>
 								</div>
-								<!--  <a href="#" onclick='$("addRideContent").load("../test.jsp");'><h2>aa</h2></a>-->
+								
 							</div>
 
 						</div>

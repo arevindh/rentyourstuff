@@ -86,7 +86,8 @@ h1 {padding:0px 0 0 10px;position:relative;float:left}
 *+html .b2 {margin:-2px 0 5px -5px}
 .b3 {color:#0f0f0f;font-size:10px;line-height:1.2em;display:block}
 /* content */
-#content {width:100%;padding:10px 0 40px;background:#fff;border-radius:18px 18px 0 0;-moz-border-radius:18px 18px 0 0;-webkit-border-radius:18px 18px 0 0;position:relative;z-index:2}
+.loadContent {width:100%;padding:10px 0 40px;background:#fff;border-radius:18px 18px 0 0;-moz-border-radius:18px 18px 0 0;-webkit-border-radius:18px 18px 0 0;position:relative;z-index:4; }
+#content {width:100%;padding:10px 10px 40px 15px;background:#fff;border-radius:18px 18px 0 0;-moz-border-radius:18px 18px 0 0;-webkit-border-radius:18px 18px 0 0;position:relative;z-index:2; min-height:600px; }
 #content .padding {padding:24px 12px 0}
 .spacer-1 {width:100%;background:url(../images/pic-1.gif) 217px 0 repeat-y}
 h2 {font-size:39px;line-height:1.9em;color:#0f0f0f;margin-bottom:5px;letter-spacing:-2px}
@@ -139,6 +140,7 @@ dl.contact dt, dl.contact dd {margin-bottom:5px}
 #myform textarea {height:262px;overflow:auto;float:left;width:526px;font-size:13px;line-height:1.23em;color:#0f0f0f;padding:4px 10px;margin:0;font-family:Arial, Helvetica, sans-serif;border:1px solid #ebebeb;background:none}
 .text-form {float:left;display:block;font-size:14px;width:73px;line-height:1.78em;color:#0f0f0f}
 /*CUSTOM CSS*/
+.customForm {margin-left: 20px}
 .customForm input, .contactForm textarea { -webkit-border-radius: 4px; -moz-border-radius:4px; o-border-radius:4px; border-radius: 4px;  border:none; color:#c4c4c4; padding:7px; background:#151515; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
 .customForm textarea{ width:630px; height: 100px}
 .customForm p{ margin-bottom:0px;}
