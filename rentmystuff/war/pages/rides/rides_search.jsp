@@ -33,7 +33,7 @@
 
 				</p>
 				<p>
-					<input type="submit" name="searchThisRide" class="submit"
+					<input type="submit" name="resolveAction" class="submit"
 						value="Find a Ride">
 				</p>
 

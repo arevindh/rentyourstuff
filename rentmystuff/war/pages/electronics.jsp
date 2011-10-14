@@ -158,7 +158,7 @@
 									</div>
 
 								</div>
-								<div>
+								
 									<div>
 										<img src="../images/buttons/search_book.png"></img>
 										<div style="float: right">
@@ -170,7 +170,7 @@
 													style="float: left; padding-top: 10%;">Find Items</h3> </a>
 										</div>
 									</div>
-								</div>
+								
 
 							</div>
 						</div>

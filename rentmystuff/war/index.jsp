@@ -13,32 +13,35 @@
 <link rel="stylesheet" href="css/layout.css" type="text/css"
 	media="screen">
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
 <script src="js/cufon-yui.js" type="text/javascript"></script>
 <script src="js/cufon-replace.js" type="text/javascript"></script>
 <script src="js/Open_Sans_400.font.js" type="text/javascript"></script>
 <script src="js/Open_Sans_Light_300.font.js" type="text/javascript"></script>
-<script src="js/Open_Sans_Semibold_600.font.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/tms-0.3.js"></script>
-<script type="text/javascript" src="js/tms_presets.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script src="js/Open_Sans_Semibold_600.font.js"
+	type="text/javascript"></script>
 <script src="js/FF-cash.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/PageLoader.js"></script>
 <script src="js/searchrides.js" type="text/javascript"></script>
-<script src="js/timepicker.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
 
-<!--INSERT ALL CDN js REFERENCES HERE-->
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+<!--INSERT ALL CDN JS REFS HERE-->
 <script
 	src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"
+	type="text/javascript"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"
+	type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"
 	type="text/javascript"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"
-	type="text/javascript"></script>
-
+<!--INSERT JS LOADS HERE-->
+<script src="js/timepicker.js" type="text/javascript"></script>
+<script src="js/PageLoader.js" type="text/javascript"></script>
 </head>
 
 <!--[if lt IE 7]>
@@ -67,7 +70,7 @@
 						%>
 						<a
 							href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login">
-							<img src="../images/buttons/fb.png">
+							<img src="images/buttons/fb.png">
 						</a>
 						<%
 							} else {
@@ -80,22 +83,15 @@
 							}
 						%>
 					</div>
-					<!--<form id="search-form" action="" method="post" enctype="multipart/form-data">
-                              <fieldset>
-                                  <div class="search-form">					
-                                      <input type="text" name="search" value="Type Keyword Here" onBlur="if(this.value=='') this.value='Type Keyword Here'" onFocus="if(this.value =='Type Keyword Here' ) this.value=''" />
-                                      <a href="#" onClick="document.getElementById('search-form').submit()">Search</a>									
-                                  </div>
-                              </fieldset>
-                          </form>-->
+					
 				</div>
 				<div class="row-2">
 					<nav>
 						<ul class="menu">
-							<li><a class="active" href="index.jsp">Home Page</a></li>
-							<li><a href="#" onclick='loadRides();'>Rides</a></li>
-							<li><a href="pages/books.jsp">Books</a></li>
-							<li><a href="pages/electronics.jsp">Electronics</a></li>
+							<li><a id="home-nav" class="active" href="index.jsp">Home Page</a></li>
+							<li><a id="rides-nav" href="#" onclick='loadRides();'>Rides</a></li>
+							<li><a id="books-nav" href="#" onclick="loadBooks();">Books</a></li>
+							<li><a id="electronics-nav" href="#" onclick="loadElectronics();">Electronics</a></li>
 							<li class="last-item"><a href="pages/contacts.html">Miscellaneous</a></li>
 						</ul>
 					</nav>

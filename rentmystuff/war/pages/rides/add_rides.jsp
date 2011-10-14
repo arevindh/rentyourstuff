@@ -1,3 +1,4 @@
+
 <form id="addRideForm" action="Submit.jsp">
 	<div class="col-3">
 		<div class="customForm">
@@ -16,7 +17,7 @@
 					onblur="if (this.value == ''){this.value = 'To where'; }"
 					onfocus="if (this.value == 'To where') {this.value = '';}">
 
-				<input type="text" name="date" id="datetimepicker"
+				<input type="text" name="date" class="datetimepicker"
 					value="Select Date & Time"
 					onblur="if (this.value == ''){this.value = 'Select Date & Time'; }"
 					onfocus="if (this.value == 'Select Date & Time') {this.value = '';}">

@@ -1,8 +1,6 @@
 <form id="addBookForm" action="Submit.jsp">
-	<div class="col-3">
+	<div class="col-1">
 		<h2>Add a Book</h2>
-		<p>Share any book or novel you may have already read with friends, colleagues or acquaintances and while you are at it, make a 
-		few extra bucks. The details can be entered below and we will share them with your trust circle.</p>
 		<div class="customForm">
 			<p>
 				<input type="text" name="bookTitle" id="bookTitle" value="Book Title"

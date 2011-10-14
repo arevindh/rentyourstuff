@@ -10,6 +10,7 @@
 <%@ page import="com.google.appengine.api.datastore.EntityNotFoundException" %>
 
 <%
+	out.println("top");
 	String AuthToken = request.getParameter("AuthToken"); 
 	DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
 	String UserID = null;
@@ -40,5 +41,7 @@
 			}
 		}
 	}
+	
+	out.println(UserID);
 	
 %>
