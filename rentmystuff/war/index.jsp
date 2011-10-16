@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ page import="rentmystuff.FacebookCookieParser"%>
-<%@include file="pages/UserCheck.jsp"%>
 <html lang="en">
 <head>
 <title></title>
@@ -56,6 +54,9 @@
 </head>
 <body id="page1">
 	<!-- header -->
+	<div id="fb-root"></div>
+<script src="js/welcomeuser.js">
+</script>
 	<div class="bg">
 		<div class="main">
 			<header>
@@ -64,26 +65,7 @@
 						<a class="logo" href="index.jsp">Rent.My.Stuff</a> <strong
 							class="slog">Peer-to-Peer Sharing Portal</strong>
 					</h1>
-					<div id="FBlogin">
-						<%
-							if (UserID == null) {
-						%>
-						<a
-							href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login">
-							<img src="images/buttons/fb.png">
-						</a>
-						<%
-							} else {
-						%>
-						<h4>
-							Hello
-							<%=UserID%>
-						</h4>
-						<%
-							}
-						%>
-					</div>
-					
+				<div id="FBlogin"></div>	
 				</div>
 				<div class="row-2">
 					<nav>
