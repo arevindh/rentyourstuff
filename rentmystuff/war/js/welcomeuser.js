@@ -5,8 +5,8 @@
 	  	  url: 'pages/UserCheck.jsp',
 	  	  success: function(data) {
 	  		  //alert('Load was performed.');
-	  		  //alert(data);
-	  		  if(data == null) {
+	  		
+	  		  if(data.indexOf("null")!=-1) {
 	  				var loginFB = '<a href="https://www.facebook.com/dialog/oauth?client_id=220486511346030&redirect_uri=http://share-group.appspot.com/login">'
 	  					+'<img src="images/buttons/fb.png">'
 	  					+'</a>';

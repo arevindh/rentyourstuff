@@ -71,10 +71,10 @@
 					<nav>
 						<ul class="menu">
 							<li><a id="home-nav" class="active" href="index.jsp">Home Page</a></li>
-							<li><a id="rides-nav" href="#" onclick='loadRides();'>Rides</a></li>
-							<li><a id="books-nav" href="#" onclick="loadBooks();">Books</a></li>
-							<li><a id="electronics-nav" href="#" onclick="loadElectronics();">Electronics</a></li>
-							<li class="last-item"><a href="pages/contacts.html">Miscellaneous</a></li>
+							<li><a id="rides-nav" href="#rides" onclick='loadRides();'>Rides</a></li>
+							<li><a id="books-nav" href="#books" onclick="loadBooks();">Books</a></li>
+							<li><a id="electronics-nav" href="#electronics" onclick="loadElectronics();">Electronics</a></li>
+							<li class="last-item"><a href="#miscellaneous" onclick="loadMisc();">Miscellaneous</a></li>
 						</ul>
 					</nav>
 				</div>

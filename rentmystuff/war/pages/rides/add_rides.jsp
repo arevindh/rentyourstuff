@@ -1,5 +1,5 @@
 
-<form id="addRideForm" action="Submit.jsp">
+<form id="addRideForm" action="pages/Submit.jsp">
 	<div class="col-3">
 		<div class="customForm">
 

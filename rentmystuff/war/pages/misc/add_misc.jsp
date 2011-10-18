@@ -1,4 +1,4 @@
-<form id="addElecForm" action="Submit.jsp">
+<form id="addElecForm" action="pages/Submit.jsp">
 
 	<h2>Add an Electronic Item</h2>
 	<p>You can share a variety of gadgets you may have lying around,

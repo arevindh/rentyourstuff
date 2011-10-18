@@ -2,7 +2,7 @@
 <div style="margin-top: 10%">
 	<div>
 		<div>
-			<img src="../images/buttons/featured_elec.png"></img>
+			<img src="../images/buttons/featured_book.png"></img>
 			<div style="float: right">
 				<a href="#" onclick='
 					$(".col-3").empty().html("<img src=\"../images/loading.gif\"></img>");
@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div>
-		<img src="../images/buttons/add_elec.png"></img>
+		<img src="../images/buttons/add_book.png"></img>
 		<div style="float: right;">
 			<a href="#" onclick='
 				$(".col-3").empty().html("<img src=\"../images/loading.gif\"></img>");
@@ -28,7 +28,7 @@
 </div>
 <div>
 	<div>
-		<img src="../images/buttons/search_elec.png"></img>
+		<img src="../images/buttons/search_book.png"></img>
 		<div style="float: right">
 			<a href="#" onclick='
 				$(".col-3").empty().html("<img src=\"../images/loading.gif\"></img>");
