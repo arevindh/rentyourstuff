@@ -78,9 +78,8 @@
 %>
 <%
 response.setContentType("text/html");
-response.getWriter().println("<div class=\"col-1\">");
-response.getWriter().println("<span style=\"font-size: 20px\">Book added successfully. This will be published to your trust circle.</span>");
-response.getWriter().println("</div>");
+response.getWriter().println("<span style=\"font-size: 20px\">Content added successfully. This will be published to your trust circle. </span>");
+
 %>
 
 

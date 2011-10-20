@@ -25,9 +25,9 @@
 					onfocus="if (this.value == 'Book Rent Cost (no. of credits)') {this.value = '';}">
 
 			</p>
-			<p>
-				<input type="submit" name="resolveAction" class="submit"
-					value="Add This Book">
+			<p><input type="hidden" name=resolveAction value="Add This Book"/>
+				<input type="submit" class="submit"
+					value="Add This Book" >
 			</p>
 
 		</div>

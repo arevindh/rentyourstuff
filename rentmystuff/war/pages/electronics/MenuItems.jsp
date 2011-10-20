@@ -18,7 +18,21 @@
 			<a href="#" onclick='
 				$(".col-3").empty().html("<img src=\"../images/loading.gif\"></img>");
 				$(".col-3").load("pages/electronics/add_electronics.jsp", function(){
-				$(".datetimepicker").timepicker(); }); return false; '>
+				$(".datetimepicker").timepicker(); 
+				$("#addElecForm").submit(function(event) {
+				/* stop form from submitting normally */
+    			event.preventDefault();
+				var inputdata = $("#addElecForm").serialize();
+				//alert(inputdata);
+				var $form=$(this),
+				url=$form.attr("action");
+				$.post(url, inputdata, function(data){
+				//alert(data);
+				$(".col-3").html(data);	
+				});
+				});
+				}); 
+				return false; '>
 				<h3 style="float: left; padding-top: 10%;">
 					Add Gadget
 					</h2></a>

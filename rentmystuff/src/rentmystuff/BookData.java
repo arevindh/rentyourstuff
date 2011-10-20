@@ -18,7 +18,6 @@ public class BookData {
 		bookdata.setProperty("Description", description);
 		bookdata.setProperty("RentCost", rentCost);
 		DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
-		System.err.println("here");
 		DataStore.put(bookdata);
 	}
 }

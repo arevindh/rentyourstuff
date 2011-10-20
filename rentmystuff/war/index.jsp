@@ -31,7 +31,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"
 	type="text/javascript"></script>
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"
+<script src="http://code.jquery.com/jquery-latest.js"
 	type="text/javascript"></script>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>

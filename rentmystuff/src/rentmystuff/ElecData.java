@@ -19,7 +19,6 @@ public class ElecData{
 		elecdata.setProperty("Description", description);
 		elecdata.setProperty("RentCost", rentCost);
 		DatastoreService DataStore = DatastoreServiceFactory.getDatastoreService();
-		System.err.println("here");
 		DataStore.put(elecdata);
 	
 	}

@@ -42,8 +42,8 @@
 				onblur="if (this.value == ''){this.value = 'Ride Cost (no. of credits)'; }"
 				onfocus="if (this.value == 'Ride Cost (no. of credits)') {this.value = '';}">
 			<br />
-			<p>
-				<input type="submit" name="resolveAction" class="submit"
+			<p><input type="hidden" name="resolveAction" value="Add This Ride" />
+				<input type="submit" class="submit"
 					value="Add This Ride">
 			</p>
 		</div>

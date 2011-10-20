@@ -9,6 +9,18 @@
 											function(){
 											$(".datetimepicker").timepicker();
 											initialize("fromAdd", "toAdd");
+											$("#addRideForm").submit(function(event) {
+											/* stop form from submitting normally */
+    										event.preventDefault();
+											var inputdata = $("#addRideForm").serialize();
+											//alert(inputdata);
+											var $form=$(this),
+											url=$form.attr("action");
+											$.post(url, inputdata, function(data){
+											//alert(data);
+											$(".col-3").html(data);	
+											});
+											});
 											});
 											return false;													
 											'><h3

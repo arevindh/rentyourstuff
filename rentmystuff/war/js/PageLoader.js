@@ -38,3 +38,7 @@ function loadElectronics(){
 	$(".col-2").load("pages/electronics/MenuItems.jsp");
 	return false;
 }
+
+function testAlert(){
+	alert("inside testAlert");
+}
