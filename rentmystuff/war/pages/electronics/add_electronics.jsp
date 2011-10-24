@@ -5,11 +5,19 @@
 		say a DSLR camera, to a friend going away on a vacation or your
 		XBox/Playstation to the gaming freaks you know. Just enter details as
 		asked below and we'll take care of the rest.</p>
-	<br />
-	<table class="customForm">
-		<tr>
-		<td>
-		<div class="customForm">
+	<br /><br/>
+	
+	<div class="col-2" style="float: right;"><h3>Who to share with?</h3><br/>
+					<table>
+					<tr><td><input type="checkbox" name="sharewith" value="friendscity" style="width: 20px;"/></td><td>Friends in City</td></tr>
+					<tr><td><input type="checkbox" name="sharewith" value="city" style="width: 20px;"/></td><td>People in City</td></tr>
+					<tr><td><input type="checkbox" name="sharewith" value="colleagues" style="width: 20px;"/></td><td>Colleagues</td></tr>
+					<tr><td><input type="checkbox" name="sharewith" value="friends" style="width: 20px;"/></td><td>All Friends</td></tr>
+					<tr><td><input type="checkbox" name="sharewith" value="everyone" style="width: 20px;"/></td><td>Everyone</td></tr>
+					</table>
+	</div>
+	
+	<div class="customForm">
 			<p>
 				<input type="text" name="gadgetName" id="elecTitle"
 					value="Item Type"
@@ -39,11 +47,5 @@
 					value="Add Gadget">
 			</p>
 
-		</div>
-		</td>
-		<td>
-		HERE
-		</td>
-		</tr>
-	</table>
+		</div>		
 </form>
